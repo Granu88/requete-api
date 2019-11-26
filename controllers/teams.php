@@ -4,7 +4,14 @@ require('models/teams.php');
 
 function listTeams()
 {
-  $teams = selectTeams();
+  $teams = Teams();
   require('views/teams.php');
 }
+
+function showTeam($id)
+{
+  $team = getTeam($id);
+  require('views/team.php');
+}
+
  ?>

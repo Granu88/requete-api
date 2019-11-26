@@ -1,7 +1,7 @@
 <?php
 require('utils/db.php');
 
-function selectTeams ()
+function Teams ()
 {
   $db = dbConnect();
 
@@ -9,11 +9,36 @@ function selectTeams ()
 
   $stmt->execute();
 
-  $teams = $stmt->fetchAll(PDO::FETCH_ASSOC);
+  return $stmt->fetchAll(PDO::FETCH_ASSOC);
 
   //var_dump($stmt->debugDumpParams());
 
-  return $teams;
 
 }
+
+function getTeam ($id)
+{
+  $db = dbConnect();
+
+  $stmt = $db->prepare('SELECT
+    teams.* ,
+    coachs.name AS coachs_name,
+    coachs.id AS coachs_id
+    FROM teams
+    INNER JOIN coachs_has_teams
+    ON coachs_has_teams.id_team = teams.id
+    INNER JOIN coachs
+    ON coachs.id = coachs_has_teams.id_coach
+    WHERE teams.id = :id');
+
+  $stmt->bindValue(':id', $id);
+
+  $stmt->execute();
+
+  return $stmt->fetch(PDO::FETCH_ASSOC);
+
+}
+
+
+
  ?>

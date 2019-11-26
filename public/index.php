@@ -46,7 +46,7 @@
       </nav>
     </header>
     <?php echo $content; ?>
-    <footer class="footer-copyright">
+    <footer class="footer-copyright fixed-bottom">
       <div class="container">
         <div class="row col-md-12 justify-content-center">
             © VALLON David - All rights reserved
