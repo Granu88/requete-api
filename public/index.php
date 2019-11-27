@@ -18,7 +18,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="#acceuil">Acceuil <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item active">
               <a class="nav-link" href="#">Link</a>
@@ -46,7 +46,7 @@
       </nav>
     </header>
     <?php echo $content; ?>
-    <footer class="footer-copyright fixed-bottom">
+    <footer class="footer-copyright">
       <div class="container">
         <div class="row col-md-12 justify-content-center">
             © VALLON David - All rights reserved
@@ -54,5 +54,8 @@
       </div>
     </footer>
 
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
   </body>
 </html>

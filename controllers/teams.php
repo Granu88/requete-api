@@ -11,7 +11,7 @@ function listTeams()
 function showTeam($id)
 {
   $team = getTeam($id);
+  $players = getPlayers($id);
   require('views/team.php');
 }
-
  ?>
