@@ -23,7 +23,7 @@
         <div class="card" style="width: 22rem;">
           <img src="<?php echo $teamss['logo']?>" class="card-img-top" alt="les équipes">
           <div class="card-body">
-            <h4 class="card-title text-center"><a href="?route=team&id=<?php echo $teamss ['id']?>"><?php echo $teamss ['name']; ?></a></h4>
+            <h4 class="card-title text-center"><a href="./team/<?php echo $teamss ['id']?>"><?php echo $teamss ['name']; ?></a></h4>
           </div>
         </div>
       </div>

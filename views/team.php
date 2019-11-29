@@ -47,7 +47,7 @@
           </tr>
           <tr>
             <td>Entraîneur :</td>
-            <th><a href="?route=coach&id=<?php echo $team['coachs_id']; ?>"><?php echo $team['coachs_name']; ?></a></th>
+            <th><a href="./coach/<?php echo $team['coachs_id']; ?>"><?php echo $team['coachs_name']; ?></a></th>
           </tr>
           <tr>
             <td>Stade :</td>

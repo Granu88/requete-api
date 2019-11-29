@@ -12,6 +12,7 @@ function showTeam($id)
 {
   $team = getTeam($id);
   $players = getPlayers($id);
+  $matchs = getMatchs($id);
   require('views/team.php');
 }
 

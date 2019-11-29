@@ -51,7 +51,8 @@ function getPlayers ($idTeam)
     FROM players
     INNER JOIN players_has_teams
     ON players_has_teams.id_player= players.id
-    WHERE players_has_teams.id_team = :id_team');
+    WHERE players_has_teams.id_team = :id_team
+  ');
 
     $stmt->bindValue(':id_team', $idTeam);
 
@@ -74,17 +75,35 @@ function getCoach ($idCoach)
     ON coachs_has_teams.id_coach = coachs.id
     INNER JOIN teams
     ON teams.id = coachs_has_teams.id_team
-    WHERE coachs_has_teams.id_coach = :id_coach');
+    WHERE coachs_has_teams.id_coach = :id_coach
+  ');
 
   $stmt->bindValue(':id_coach', $idCoach);
 
   $stmt->execute();
 
   return $stmt->fetch(PDO::FETCH_ASSOC);
-
 }
 
-function getMatchs($idMatchs)
+function getMatchs($id)
+{
+  $db = dbConnect();
+
+  $stmt = $db->prepare('SELECT *
+    FROM matchs
+    INNER JOIN teams AS th
+    ON th.id = matchs.id_team_home
+    INNER JOIN teams AS ta
+    ON ta.id = matchs.id_team_away
+    WHERE(th.id = :id OR ta.id = :id)
+  ');
+
+  $stmt->bindValue(':id', $id);
+
+  $stmt->execute();
+
+  return $stmt->fetchAll(PDO::FETCH_ASSOC);
+}
 
 
  ?>
