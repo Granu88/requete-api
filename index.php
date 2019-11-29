@@ -13,4 +13,9 @@ if ($route === 'teams') {
   $id = $_GET['id'];
   showTeam($id);
 }
+  elseif ($route === 'coach') {
+  require('controllers/teams.php');
+  $id = $_GET['id'];
+  showCoach($id);
+}
 ?>

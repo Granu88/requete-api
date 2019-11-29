@@ -14,4 +14,11 @@ function showTeam($id)
   $players = getPlayers($id);
   require('views/team.php');
 }
+
+function showCoach($id)
+{
+  $coach = getCoach($id);
+  require('views/coach.php');
+}
+
  ?>

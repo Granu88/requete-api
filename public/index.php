@@ -10,7 +10,7 @@
   <body>
     <header>
       <nav class="navbar navbar-expand-lg navbar-light bg-secondary">
-        <a class="navbar-brand" href="#">Navbar</a>
+        <a class="navbar-brand" href="./">Equipes</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -18,12 +18,12 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="#acceuil">Acceuil <span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="views/teams.php">Joueurs</a>
             </li>
             <li class="nav-item active">
-              <a class="nav-link" href="#">Link</a>
+              <a class="nav-link" href="#">Entraîneurs</a>
             </li>
-            <li class="nav-item active dropdown">
+            <!--<li class="nav-item active dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Dropdown
               </a>
@@ -36,7 +36,7 @@
             </li>
             <li class="nav-item active">
               <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-            </li>
+            </li>-->
           </ul>
           <form class="form-inline my-2 my-lg-0">
             <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
@@ -46,7 +46,7 @@
       </nav>
     </header>
     <?php echo $content; ?>
-    <footer class="footer-copyright">
+    <footer class="footer-copyright fixed-bottom">
       <div class="container">
         <div class="row col-md-12 justify-content-center">
             © VALLON David - All rights reserved

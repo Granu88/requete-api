@@ -23,6 +23,7 @@
     color: white;
   }
 
+
 </style>
 
 <div class="container text-center mt-4 mb-3">
@@ -46,7 +47,7 @@
           </tr>
           <tr>
             <td>Entraîneur :</td>
-            <th><?php echo $team['coachs_name']; ?></th>
+            <th><a href="?route=coach&id=<?php echo $team['coachs_id']; ?>"><?php echo $team['coachs_name']; ?></a></th>
           </tr>
           <tr>
             <td>Stade :</td>
@@ -60,7 +61,7 @@
 <div class="container text-center">
   <div class="row">
     <div class="col-md-12">
-      <table class="table text-center">
+      <table class="table">
         <thead>
           <tr>
             <th scope="col">Nom</th>
@@ -77,7 +78,7 @@
           <?php foreach ($players as $player): ?>
           <tr>
             <td><?php echo $player['name']; ?></td>
-            <td> <img src="<?php echo $player['photo']; ?>" alt=""> </td>
+            <td> <img src="<?php echo $player['photo']; ?>" alt="photo"> </td>
             <td><?php echo $player['poste']; ?></td>
             <td><?php echo (new DateTime($player['birthday_date']))->format('d/m/Y'); ?></td>
             <td><?php echo $player['birthday_place']; ?></td>
