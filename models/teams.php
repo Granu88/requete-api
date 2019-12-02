@@ -89,7 +89,10 @@ function getMatchs($id)
 {
   $db = dbConnect();
 
-  $stmt = $db->prepare('SELECT *
+  $stmt = $db->prepare('SELECT
+    matchs.*,
+    th.short_name AS th_short_name,
+    ta.short_name AS ta_short_name
     FROM matchs
     INNER JOIN teams AS th
     ON th.id = matchs.id_team_home
