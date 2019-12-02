@@ -22,4 +22,9 @@ function showCoach($id)
   require('views/coach.php');
 }
 
+function listCoachs()
+{
+  $coachs = allCoachs();
+  require('views/coachs.php');
+}
  ?>

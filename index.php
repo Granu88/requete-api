@@ -22,4 +22,9 @@ if ($route === 'teams') {
   showCoach($id);
 }
 
+  elseif ($route === 'coachs') {
+  require('controllers/teams.php');
+  listCoachs();
+  }
+
 ?>

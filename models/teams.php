@@ -108,5 +108,17 @@ function getMatchs($id)
   return $stmt->fetchAll(PDO::FETCH_ASSOC);
 }
 
+function allCoachs()
+{
+  $db = dbConnect();
+
+  $stmt = $db->prepare('SELECT *
+
+  FROM coachs');
+
+  $stmt->execute();
+
+  return $stmt->fetchAll(PDO::FETCH_ASSOC);
+}
 
  ?>
